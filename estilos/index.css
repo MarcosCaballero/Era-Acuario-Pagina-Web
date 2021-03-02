@@ -1,3 +1,23 @@
+/* Indices (Para acceder a los indices hay que tocar a la vez ctrl + f y colocar el nombre del indice deseado)
+    1- COLORES ROOT
+    2- ESTILOS GENERALES DE LA PAGINA
+    3- IMAGEN LANDING PAGE 
+    4- MENU DESPLEGABLE
+    5- BOTON DE DESPLIEGUE DE PAGINA
+    6- TITULO PRINCIPAL DE LA PAGINA
+    7- SECCION NOSOTROS
+    8- SECCION STAFF
+*/
+
+
+
+
+
+
+
+
+
+
 /* COLORES ROOT */
 :root {
     --color-primary: #02C8A7;
@@ -43,11 +63,11 @@ header {
 
 /* MENU DESPLEGABLE */
 
-.container, .button, .nav{
+.container-1, .button, .nav{
     position: absolute;
 }
 
-.container{
+.container-1{
     margin: auto;
     top: 0%;
     left: 50%;
@@ -63,19 +83,23 @@ header {
     width: 70px;
     padding: 3px 0px;
     height: 43px;
-    background: var(--color-primary);
+    background-color: white;
     opacity: 0.7;
-    border-radius: 30px;
     transition: all 0.5s ease-in-out;
-    box-shadow: 1px 3px 10px 0 rgba(0,0,0,0.3);
     cursor: pointer;
     text-align: center;
     justify-content: center;
-    color: var(--color-third);
+    border: none;
+    /* ACTIVANDO ESTE CONJUNTO COLOCAMOS UN BOTON DE COLOR VERDE EN EL FONDO DEL MENU */
+        /* border-radius: 30px; */
+        /* box-shadow: 1px 3px 10px 0 rgba(0,0,0,0.3); */
+        /* background: var(--color-primary); */
+        /* color: var(--color-third); */
 }
 
 .button:hover {
     opacity: 1;
+    transition: scale(1.20,1.05);
 }
 
 .button:before{
@@ -90,7 +114,7 @@ header {
     justify-content: center;
 }
 
-.button:after{
+/* .button:after{
     display: none;
     position: absolute;
     top: 20px;
@@ -98,9 +122,9 @@ header {
     content: url(../imagenes/chevron-down-solid.svg);
     width: 25px;
     height: 4px;
-    /* background: #fff; */
+    /* background: #fff; 
     transform: rotate(180deg);
-}
+} */
 
 .nav{
     transform: translateY(-10%);
@@ -128,6 +152,7 @@ header {
 }
 
 .nav a:hover{
+    transform: scale(1.20,1.05);
     color: #5f5f5f;
 }
 
@@ -137,19 +162,51 @@ header {
 }
 
 #toggle:checked ~ .button{
-    color: var(--color-primary);
+    /* color: var(--color-primary); SI ACTIVAMOS LA OPCION DEL MENU VERDE DE FONDO TENEMOS QUE ACTIVAR ESTA OPCION Y DESACTIVAR LA DE ABAJO */
+    color: white;
     opacity: 1;
     transform: rotate(540deg);
     box-shadow: 0 0 0 0 transparent;
 }
 
 /* BOTON DE DESPLIEGUE DE PAGINA */
+.container-2 {
+	position: absolute;
+	top: 93%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.button-logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	text-decoration: none;
+	/* z-index: 3; */
+}
+
+.image_container_scroll {
+	margin-top: 12px;
+	width: 20px;	
+}
+
+.button-logo:hover {
+	transform: scale(1.20,1.05);
+	/* transition: smooth; */
+    transition: all 600ms;
+    transform: rotate(360deg);
+    transform: translate(0px, -20px);
+
+}
 
 /* TITULO PRINCIPAL DE LA PAGINA */
 .titulo-principal {
     display: flex;
     justify-content: space-evenly;
     font-size: 30px;
+    margin: 20px;
     /* flex-direction: row; */
 }
 
@@ -163,6 +220,26 @@ header {
     /* font-size: 20px; */
 }
 
+
+/* SECCION NOSOTROS */
+
+.seccion-nosotros {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-nosotros {
+    width: 90vw;
+    height: 100px;
+    background-color: white;
+    border: outset;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+/* SECCION STAFF */
 
 
 
