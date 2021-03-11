@@ -7,16 +7,8 @@
     6- TITULO PRINCIPAL DE LA PAGINA
     7- SECCION NOSOTROS
     8- SECCION STAFF
+    9- SECCION CURSOS
 */
-
-
-
-
-
-
-
-
-
 
 /* COLORES ROOT */
 :root {
@@ -32,23 +24,25 @@ html {
   /*overflow-x: hidden; */
 }
 
+body, h1, h2, p, div, a{ 
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
 body {
     background-color: white;
     /* background-color: grey; */
     width: 100%;
     height: 100vh;
-}
-
-html, body, div, section, nav, header, h1, h2, h3,h4, p, ul, li, a {
-    margin: 0px;
-    padding: 0px;
+    font-family: 'Comfortaa', cursive;
 }
 
 /* IMAGEN LANDING PAGE */
 .landing_page {
-	width: 70vw;
+	width: 100%;
 	height: 100vh;
-	background-image: url(../imagenes/imagen6.jpeg);
+	background-image: url(../imagenes/Design\ 1-09-2020\ 11.42\ AM-copy-copy.svg);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-origin: left; 
@@ -60,6 +54,35 @@ header {
     width: 100%;
     align-items: center;
 }
+/* BOTON DE VOLVER */
+
+.boton-volver {
+    display: flex;
+    position: fixed;
+    top: 85%;
+    left: 95%;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center; 
+    opacity: 0.3;   
+}
+
+.boton-volver:hover {
+    opacity: 1;
+    transform: scale(1.20,1.20);
+    background-color: rgba(0, 247, 255, 0.5);
+}
+
+.boton-volver > img {
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+}
+
+
 
 /* MENU DESPLEGABLE */
 
@@ -69,8 +92,8 @@ header {
 
 .container-1{
     margin: auto;
-    top: 0%;
-    left: 50%;
+    top: 2%;
+    left: 49.7%;
     margin-left: -20px;
 }
 
@@ -178,6 +201,7 @@ header {
 }
 
 .button-logo {
+    text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -232,14 +256,187 @@ header {
 
 .container-nosotros {
     width: 90vw;
-    height: 100px;
+    height: auto;
     background-color: white;
-    border: outset;
-    margin-bottom: 15px;
+    border-left: none;
+    border-right: none;
+    box-shadow:  4px 4px 15px  var(--color-primary) ;
+    margin-bottom: 20px;
+    padding: 10px 60px;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+.container-nosotros > h2 {
+    line-height: 2.5;
+}
+/* SECCION STAFF */
+
+.main-staff {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-staff-arriba {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+}
+
+.container-staff {
+    /* position: absolute; */
+    /* display: flex; 
+    flex-direction: column;
+    align-items: center; */
+    width: 20%;
+    height: 290px;
+    background-color: var(--color-third);
+    margin-bottom: 10px;
+    border-radius: 100%;
+}
+
+
+#staff-1 {
+    background-image: url(../imagenes/staff1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#staff-2 {
+    background-image: url(../imagenes/staff2.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#staff-3 {
+    background-image: url(../imagenes/staff3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#staff-4 {
+    background-image: url(../imagenes/staff4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#staff-5 {
+    background-image: url(../imagenes/staff5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.staff-right {
+    border-radius: 100%;
+    margin: 0px;
+    background-color: rgba(31,31, 31, 0.5);
+    padding: 14px;
+    opacity: 0;
+    width: auto;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-staff {
+    background-color: white;
+    border: none;
+    text-decoration: none;
+    color: black;
+    border-radius: 40px;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+}
+
+.container-staff:hover {
+    border-radius: 100%;
+    transform: scale(1.05,1.05);
+    transition: ease-in-out;
+    transition: all 1s;
+}
+
+
+.container-staff:hover .staff-right {
+    opacity: 1;
+}
+
+/* SECCION CURSOS */
+
+.main-cursos {
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center; */
+}
+
+
+.container-cursos {
+    width: 30vw;
+    height: 300px;
+    border-radius: 10px;
+    border: solid;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* SECCION CONTACTANOS */
+
+.container {
+
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+    background-color: rgb(219, 215, 215);
+    margin-top: 20px;
     padding: 10px;
 }
 
-/* SECCION STAFF */
+.footer > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.imagen-footer{
+    width: 20px;
+    margin-right: 5px;
+}
+/* Diseño responsive */
+
+@media (max-width: 1000px) and (min-width: 700px) {
+
+    .container-staff {
+        background-color: red;
+    }
+
+}
+
+/* DISPOSITIVO PEQUEÑO */
+
+@media (max-width: 360px) and (max-height: 640px) { 
+    
+}
+
+/* ORDENADOR PORTATIL MEDIO */
+
+@media (min-width: )
 
 
 
