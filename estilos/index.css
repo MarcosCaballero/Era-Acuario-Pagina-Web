@@ -509,6 +509,7 @@ header {
 
     .main-staff-arriba {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
         width: 80vw;
@@ -543,6 +544,7 @@ header {
 
     .main-staff-arriba {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -551,6 +553,8 @@ header {
     .container-staff {
         width: 200px;
         height: 200px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     /* FOOTER */
